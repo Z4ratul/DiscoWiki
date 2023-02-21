@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import ru.kostserg.discowiki.navigation.WikiNavigation
 import ru.kostserg.discowiki.ui.theme.DiscoWikiTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,22 +23,17 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    WikiNavigation()
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     DiscoWikiTheme {
-        Greeting("Android")
+
     }
 }
