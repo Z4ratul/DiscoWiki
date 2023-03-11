@@ -13,16 +13,20 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import ru.kostserg.discowiki.navigation.WikiRoute
+import ru.kostserg.discowiki.ui.theme.DiscoWikiTheme
 
 @Composable
-fun Main (navController: NavHostController){
+fun MainScreen (navController: NavHostController){
     Column() {
         TopAppBar() {
             Text("Disco Wiki", fontSize = 25.sp)
             Spacer(Modifier.weight(1f,true))
-            IconButton(onClick = { }) {
+            IconButton(onClick = { navController.navigate(WikiRoute.AllBuilds.route)}) {
                 Icon(Icons.Filled.List, contentDescription = "Билды")
             }
             IconButton(onClick = { /*TODO*/ }) {
@@ -34,7 +38,7 @@ fun Main (navController: NavHostController){
             )
             Row() {
                 Text(text = "Тут будет картинки и наименования")
-                Button(onClick = {}) {
+                Button(onClick = {navController.navigate(WikiRoute.Thought.route)}) {
                     Text(text = "Переход в мысли")
                 }
             }
@@ -42,11 +46,18 @@ fun Main (navController: NavHostController){
             )
             Row() {
                 Text(text = "Тут будет картинки и наименования")
-                Button(onClick = {}) {
+                Button(onClick = {navController.navigate(WikiRoute.Item.route)}) {
                     Text(text = "Переход в предмет")
                 }
             }
 
         }
+    }
+}
+@Preview(showBackground = true)
+@Composable
+fun prevMainScreen(){
+    DiscoWikiTheme() {
+        MainScreen(navController = rememberNavController())
     }
 }

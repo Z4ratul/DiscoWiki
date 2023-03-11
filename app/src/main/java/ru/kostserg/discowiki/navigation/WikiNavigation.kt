@@ -19,11 +19,11 @@ fun WikiNavigation(){
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = WikiRoute.Main.route){
-        composable(WikiRoute.Main.route){ Main(navController)}
-        composable(WikiRoute.Thought.route){ Thought(navController)}
-        composable(WikiRoute.Item.route){ Item(navController)}
-        composable(WikiRoute.AllBuilds.route){ AllBuilds(navController)}
-        composable(WikiRoute.Build.route){ Build(navController)}
+        composable(WikiRoute.Main.route){ MainScreen(navController)}
+        composable(WikiRoute.Thought.route){ ThoughtScreen(navController)}
+        composable(WikiRoute.Item.route){ ItemScreen(navController)}
+        composable(WikiRoute.AllBuilds.route){ AllBuildsScreen(navController)}
+        composable(WikiRoute.Build.route){ BuildScreen(navController)}
 
     }
 }
