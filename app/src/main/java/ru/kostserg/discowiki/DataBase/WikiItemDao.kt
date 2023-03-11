@@ -8,10 +8,10 @@ import androidx.room.Query
 
 @Dao
 interface WikiItemDao {
-    @Query("select * from items_table")
+    @Query("select * from item_table")
     fun getAllItems():List<Item>
 
-    @Query("delete from items_table")
+    @Query("delete from item_table")
     fun deleteAllItems()
 
     @Insert

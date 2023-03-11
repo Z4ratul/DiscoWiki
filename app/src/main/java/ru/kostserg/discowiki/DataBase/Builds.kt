@@ -14,6 +14,18 @@ data class Build(
     var Bonuses:String,
 
     @ColumnInfo()
+    var Intellect:Int,
+
+    @ColumnInfo()
+    var Psyche:Int,
+
+    @ColumnInfo()
+    var Physique:Int,
+
+    @ColumnInfo()
+    var Motorics:Int,
+
+    @ColumnInfo()
     var Logic:Int,
 
     @ColumnInfo()
