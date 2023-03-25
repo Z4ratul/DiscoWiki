@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.List
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -33,6 +34,11 @@ fun AllBuildsScreen (navController: NavHostController){
         }
     ) {
         Column() {
+            TopAppBar() {
+                IconButton(onClick = { navController.navigate(WikiRoute.Main.route)}) {
+                    Icon(Icons.Filled.ArrowBack, contentDescription = "Назад")
+                }
+            }
             BuildItem(name = "Build 1", navController = navController)
             BuildItem(name = "Build 2", navController = navController)        }
         }

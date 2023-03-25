@@ -1,9 +1,6 @@
 package ru.kostserg.discowiki.screens
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.Text
@@ -40,16 +37,46 @@ fun BuildScreen (navController: NavHostController){
                 textAlign = TextAlign.Center,
                 fontFamily = FontFamily.Cursive
             )
-            Row(Modifier.padding(vertical = 5.dp)) {
-                Icon(Icons.Filled.ArrowBack, contentDescription = "")
-                Text(text = "1", fontSize = 10.sp)
-                Icon(Icons.Filled.ArrowForward, contentDescription = "")
+            Column() {
+                Row(
+                    Modifier
+                        .padding(vertical = 5.dp)
+                        .fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+                    Icon(Icons.Filled.ArrowBack, contentDescription = "")
+                    Text(text = "1", fontSize = 20.sp, modifier = Modifier.padding(3.dp,0.dp))
+                    Icon(Icons.Filled.ArrowForward, contentDescription = "")
+                }
+                Row(
+                    Modifier
+                        .padding(vertical = 5.dp)
+                        .fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+                    Icon(Icons.Filled.ArrowBack, contentDescription = "")
+                    Text(text = "1", fontSize = 20.sp, modifier = Modifier.padding(3.dp,0.dp))
+                    Icon(Icons.Filled.ArrowForward, contentDescription = "")
+                }
+                Row(
+                    Modifier
+                        .padding(vertical = 5.dp)
+                        .fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+                    Icon(Icons.Filled.ArrowBack, contentDescription = "")
+                    Text(text = "1", fontSize = 20.sp, modifier = Modifier.padding(3.dp,0.dp))
+                    Icon(Icons.Filled.ArrowForward, contentDescription = "")
+                }
+                Row(
+                    Modifier
+                        .padding(vertical = 5.dp)
+                        .fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+                    Icon(Icons.Filled.ArrowBack, contentDescription = "")
+                    Text(text = "1", fontSize = 20.sp, modifier = Modifier.padding(3.dp,0.dp))
+                    Icon(Icons.Filled.ArrowForward, contentDescription = "")
+                }
             }
+
         }
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun prevBuildScreen(){
     DiscoWikiTheme() {
